@@ -11,9 +11,9 @@
     fetch("data.json")
       .then(response => response.json())
       .then(data => {
-        var html = '';
+        var html = " ";
         data.forEach(item => {
-          html += 'ID: ${item.ID}, Name: ${item.Name}<br>';
+          html += "ID:"+ ${item.ID}, "Name: "+ ${item.Name}+"<br>";
         });
         document.getElementById("showData").innerHTML = html;
       })
