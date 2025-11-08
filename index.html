@@ -1,24 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <body>
-<table id="myTable" border="1">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-  </tr>
-</table>
+<div id="showData"></div> 
 
 <script>
-fetch("data.json")
-  .then(response => response.json())
-  .then(data => {
-    var html = '';
-    data.forEach(item => {
-      html += `ID: ${item.ID}, Name: ${item.Name}<br>`;
-    });
-    document.getElementById("showData").innerHTML = html;
-  })
-  .catch(error => console.error('Error:', error));
+fetch("C:\Users\User\OneDrive\Desktop\new\New folder\data.json"){
+.then(response => response.json())
+.then(data => {
+for (let i=0; i<data.length; i++){
+document.getElementById("showData").innerHTML += data[i].ID + ":" + data[i].Name +"</br>";
+}
+});
 </script>
 </body>
 </html>
