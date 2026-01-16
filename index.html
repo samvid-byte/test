@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sa">
+<head meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+<title>dhatu</title>
+<style>
+       body {background-color:khaki; color: teal;}
+        #results { margin-top: 10px; }
+        .result-item { padding: 5px; border-bottom: 1px solid #000080; }
+    </style>
+</head>
+<body>
+   <center> <h1>धातुः</h1>
+    <input id="searchInput" type="text" placeholder="अन्वेषणं कुरु...">
+    <button onclick="searchText()">अन्वेषणम्</button>
+    <div id="results"></div></center>
+
+    <script>
+        let jsonData = [];
+
+        // Load JSON file
+        fetch("./dhatu.json")
+            .then(response => response.json())
+            .then(data => {
+                jsonData = data.items; // Adjust based on your JSON structure
+                console.log("JSON loaded:", jsonData);
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+
+        function searchText() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (!query) {
+                resultsDiv.innerText = '*प्रदत्ते स्थाने अन्वेषणं कुरु।';
+                return;
+            }
+
+            const filtered = jsonData.filter(item => 
+                item.text?.toLowerCase().includes(query)
+            );
+
+            if (filtered.length === 0) {
+                resultsDiv.innerText = '*किमपि न दृष्टम्।';
+            } else {
+                filtered.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'result-item';
+                    div.innerText = item.text;
+                    resultsDiv.appendChild(div);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

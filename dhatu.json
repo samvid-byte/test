@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "dhatu": "भू",
+      "transliteration": "bhū",
+      "artha": "भू सत्तायाम् । ",
+      "gana": "भ्वादिगणः । ",
+      "other": "अकर्मकः । सेट् । ",
+      "category": "परस्मैपदी । ",
+      "vikarana": "शप् । ",
+      "id": 1,
+      "lat_3rd_person_singular": "भवति",
+      "lat_3rd_person_dual": "भवतः",
+      "lat_3rd_person_plural": "भवन्ति",
+      "lat_2nd_person_singular": "भवसि",
+      "lat_2nd_person_dual": "भवथः",
+      "lat_2nd_person_plural": "भवथ",
+      "lat_1st_person_singular": "भवामि",
+      "lat_1st_person_dual": "भवावः",
+      "lat_1st_person_plural": "भवामः"
+    },
+    {
+      "dhatu": "वद्",
+      "transliteration": "vad",
+      "artha": "वद् व्यक्तायां वाचि । ",
+      "gana": "भ्वादिगणः । ",
+      "other": "अकर्मकः । सेट् । ",
+      "category": "परस्मैपदी । ",
+      "vikarana": "शप् । ",
+      "id": 1,
+      "lat_3rd_person_singular": "वदति",
+      "lat_3rd_person_dual": "वदतः",
+      "lat_3rd_person_plural": "वदन्ति",
+      "lat_2nd_person_singular": "वदसि",
+      "lat_2nd_person_dual": "वदथः",
+      "lat_2nd_person_plural": "वदथ",
+      "lat_1st_person_singular": "वदामि",
+      "lat_1st_person_dual": "वदावः",
+      "lat_1st_person_plural": "वदामः"
+    }
+  ]
+}
